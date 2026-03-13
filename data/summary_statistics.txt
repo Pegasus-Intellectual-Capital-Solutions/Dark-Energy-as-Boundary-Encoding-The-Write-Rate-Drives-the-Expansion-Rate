@@ -1,0 +1,69 @@
+# Paper 7: Key Numerical Results
+# All computed from Planck 2018 + Madau & Dickinson 2014 + Egan & Lineweaver 2010
+# No free parameters
+
+# ============================================================
+# QEC Redundancy History
+# ============================================================
+# κ(z) = S_hor(z) / S_bulk(z)
+# S_hor = π c² / (ℓ_P² H²)
+# S_bulk = S_rad + S_BH(z)
+
+kappa_minimum_log10          = 18.75
+kappa_minimum_redshift       = 1.15
+kappa_minimum_cosmic_time_Gyr = 5.30
+kappa_today_log10            = 18.9
+kappa_recombination_log10    = 25.0
+
+# ============================================================
+# Lag Analysis
+# ============================================================
+# Cross-correlation: dA/dt vs SFRD(t - τ)
+
+best_fit_lag_Gyr             = 3.54
+peak_correlation_r           = 0.908
+zero_lag_correlation_r       = -0.214
+encoding_scale_Gpc           = 1.09  # c × τ_lag
+encoding_scale_over_R_hor    = 0.25  # L_code / R_hor
+
+# ============================================================
+# Key Epochs
+# ============================================================
+
+cosmic_noon_z                = 1.87
+cosmic_noon_t_Gyr            = 3.50
+kappa_min_z                  = 1.15
+kappa_min_t_Gyr              = 5.30
+lagged_peak_t_Gyr            = 7.04  # t_noon + τ_lag
+acceleration_onset_z         = 0.67
+acceleration_onset_t_Gyr     = 7.29
+
+# ============================================================
+# Significance Tests
+# ============================================================
+
+p_random_gaussians           = 0.52   # NOT significant
+p_randomized_sfrd            = 0.43   # NOT significant
+p_phase_shifted_sfrd         = 0.04   # Significant at 96% CL
+r_einstein_de_sitter         = -0.212 # No correlation without DE
+
+# ============================================================
+# Attractor Test
+# ============================================================
+# t_peak + τ_lag converges on acceleration onset
+
+attractor_mean_Gyr           = 7.15
+attractor_std_Gyr            = 0.30
+attractor_range_Gyr          = "6.8 - 7.6"
+# Tested across z_break = 1.5 to 5.0
+
+# ============================================================
+# Cosmological Parameters Used
+# ============================================================
+
+H0_km_s_Mpc                 = 67.4
+Omega_m                      = 0.315
+Omega_Lambda                 = 0.685
+Omega_r                      = 9.1e-5
+S_BH_today_bits              = 2.6e103  # Egan & Lineweaver 2010
+S_rad_bits                   = 4.0e88   # CMB + neutrinos
